@@ -7,6 +7,7 @@ import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '
 })
 export class AddEditEmployeeComponent implements OnInit {
 
+  name:string = '';
   email:string = '';
   eid:number;
   ePhone:number;
@@ -19,7 +20,7 @@ export class AddEditEmployeeComponent implements OnInit {
   onAddEmployee(nameInput:HTMLInputElement){
     // console.log(this.nameInput.nativeElement)
     this.EmployeeAdded.emit({
-      empName:nameInput.value,
+      empName:this.name,
       empID:this.eid,
       empEmail:this.email,
       empPhone:this.ePhone
