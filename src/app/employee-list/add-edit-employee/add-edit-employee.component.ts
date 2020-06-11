@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-add-edit-employee',
@@ -6,17 +6,18 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./add-edit-employee.component.scss']
 })
 export class AddEditEmployeeComponent implements OnInit {
-  name:string = '';
+
   email:string = '';
   eid:number;
   ePhone:number;
+  @ViewChild('nameInput', {static: true}) nameInput:ElementRef;
   @Output() EmployeeAdded = new EventEmitter<{empName:string, empID:number, empEmail:string, empPhone:number}>();
   constructor() { }
 
   ngOnInit() {
   }
   onAddEmployee(nameInput:HTMLInputElement){
-    console.log(nameInput);
+    // console.log(this.nameInput.nativeElement)
     this.EmployeeAdded.emit({
       empName:nameInput.value,
       empID:this.eid,
