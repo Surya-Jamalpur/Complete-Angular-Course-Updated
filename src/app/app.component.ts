@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   }`]
 })
 export class AppComponent {
-  title = 'Complete-Angular-Course';
+  title = 'Complete-Angular-Course-Updated';
 }
