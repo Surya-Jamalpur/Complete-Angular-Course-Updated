@@ -1,8 +1,9 @@
 <div class="row">
     <div class="col-md-6">
-        <app-add-edit-employee></app-add-edit-employee>
+        <app-add-edit-employee (EmployeeAdded)="addemployee($event)"></app-add-edit-employee>
     </div>
     <div class="col-md-6">
-        <app-employee></app-employee>
+        <h3> employee List</h3>
+        <app-employee *ngFor="let employeeData of employeeList" [employee]="employeeData"></app-employee>
     </div>
 </div>
