@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-edit',
-  templateUrl: './edit.component.html',
-  styleUrls: ['./edit.component.scss']
+  selector: 'app-add-edit-employee',
+  templateUrl: './add-edit-employee.component.html',
+  styleUrls: ['./add-edit-employee.component.scss']
 })
-export class EditComponent implements OnInit {
+export class AddEditEmployeeComponent implements OnInit {
 
   constructor() { }
 

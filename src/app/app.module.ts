@@ -17,7 +17,7 @@ import { ServerElementComponent } from './servers-and-blueprints/server-element/
 import { ServersAndBlueprintsComponent } from './servers-and-blueprints/servers-and-blueprints.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeComponent } from './employee-list/employee/employee.component';
-import { EditComponent } from './employee-list/add-edit-employee/add-edit-employee.component';
+import { AddEditEmployeeComponent } from './employee-list/add-edit-employee/add-edit-employee.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +36,7 @@ import { EditComponent } from './employee-list/add-edit-employee/add-edit-employ
     ServersAndBlueprintsComponent,
     EmployeeListComponent,
     EmployeeComponent,
-    EditComponent
+    AddEditEmployeeComponent
   ],
   imports: [
     BrowserModule,
