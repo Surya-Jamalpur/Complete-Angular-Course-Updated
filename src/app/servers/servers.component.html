@@ -1,0 +1,27 @@
+<button class="btn btn-primary" [disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+
+<p>{{ createServerStatus }}</p>
+<hr>
+<app-server></app-server>
+<app-server></app-server>
+<hr>
+with ng model
+<input type="text" [(ngModel)]="serverName" /> <br>
+with input (oneway data binding)
+<input type="text" (input)="onupdate($event)" /><br>
+Output : {{ serverName }} <br>
+<button class="btn btn-primary" [disabled]="serverName === ''" (click)="serverName = ''">Reset</button>
+<hr>
+<h3>ngif else example with LocalRef</h3>
+<input type="text" [(ngModel)]="testngif">
+<p *ngIf="testngif; else noName"> {{ testngif }}</p>
+<ng-template #noName>
+    <p>No neme given so far..!</p>
+</ng-template>
+<button class="btn btn-primary" [disabled]="testngif === ''" (click)="testngif = ''">Reset</button>
+<hr>
+<h3>log the clicks</h3>
+<button class="btn btn-primary" (click)="toggleclicks()">toggle</button>
+<div *ngIf="showContent">gfiefug ifuhgiwufhiufhi</div>
+<div *ngFor="let log of logs" [ngStyle]="{color:log <= 5 ? 'green': 'red'}">{{ log }}</div>
