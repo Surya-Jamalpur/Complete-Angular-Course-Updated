@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-
+oddNumbers:number[] = [];
+evenNumbers:number[] = [];
   constructor() { }
 
   ngOnInit() {
   }
-
+  startgametriggered(num) {
+    if(num % 2 === 0) {
+      this.evenNumbers.push(num);
+    } else {
+      this.oddNumbers.push(num);
+    }
+    console.log(num);
+  }
 }

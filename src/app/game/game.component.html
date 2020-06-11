@@ -1,1 +1,11 @@
-<p>game works!</p>
+<div class="row">
+    <div class="col-md-6">
+        <app-game-control (startedGame)="startgametriggered($event)"></app-game-control>
+    </div>
+    <div class="col-md-3">
+        <app-odd *ngFor="let oddnumber of oddNumbers" [number]="oddnumber"></app-odd>
+    </div>
+    <div class="col-md-3">
+        <app-even *ngFor="let evennumber of evenNumbers" [number]="evennumber"></app-even>
+    </div>
+</div>
