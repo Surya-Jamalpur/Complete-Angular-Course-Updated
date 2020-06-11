@@ -15,9 +15,10 @@ export class AddEditEmployeeComponent implements OnInit {
 
   ngOnInit() {
   }
-  onAddEmployee(){
+  onAddEmployee(nameInput:HTMLInputElement){
+    console.log(nameInput);
     this.EmployeeAdded.emit({
-      empName:this.name,
+      empName:nameInput.value,
       empID:this.eid,
       empEmail:this.email,
       empPhone:this.ePhone
