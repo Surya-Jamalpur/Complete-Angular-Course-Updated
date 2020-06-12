@@ -1,1 +1,15 @@
-<p>gamepractice works!</p>
+<div class="row">
+    <div class="col-md-6">
+        <app-gpcontrol (startedthegame)="whengamestarted($event)"></app-gpcontrol>
+    </div>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-6">
+                <app-oddgp *ngFor="let oddnum of oddgpnums" [datanum]="oddnum"></app-oddgp>
+            </div>
+            <div class="col-md-6">
+                <app-evengp *ngFor="let evennum of evengpnums" [datanum]="evennum"></app-evengp>
+            </div>
+        </div>
+    </div>
+</div>

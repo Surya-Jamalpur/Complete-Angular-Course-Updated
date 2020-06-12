@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-evengp',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./evengp.component.scss']
 })
 export class EvengpComponent implements OnInit {
-
+  @Input() datanum:number;
   constructor() { }
 
   ngOnInit() {

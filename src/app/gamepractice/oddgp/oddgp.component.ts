@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-oddgp',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./oddgp.component.scss']
 })
 export class OddgpComponent implements OnInit {
-
+  @Input() datanum:number;
   constructor() { }
 
   ngOnInit() {

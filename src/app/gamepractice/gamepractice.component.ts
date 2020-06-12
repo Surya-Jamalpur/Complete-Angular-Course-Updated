@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gamepractice.component.scss']
 })
 export class GamepracticeComponent implements OnInit {
-
+oddgpnums: number[] = [];
+evengpnums: number[] = [];
   constructor() { }
 
   ngOnInit() {
   }
-
+  whengamestarted(eveData) {
+    if(eveData % 2 === 0) {
+      this.evengpnums.push(eveData);
+    } else {
+      this.oddgpnums.push(eveData);
+    }
+    console.log(eveData);
+  }
 }
