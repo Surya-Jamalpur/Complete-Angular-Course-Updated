@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 
 @Component({
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
     styleUrls:['header.component.scss']
 })
 export class HeaderComponent {
+   @Output() navigated = new EventEmitter<string>();
+
+    onNavigate(selectedRoute:string) {
+        this.navigated.emit(selectedRoute);
+    }
 
 }

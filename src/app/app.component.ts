@@ -10,4 +10,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Complete-Angular-Course-Updated';
+  loadedRoute = 'Recipes';
+  pleaseNavigateto(selectedRoute) {
+    this.loadedRoute = selectedRoute;
+  }
 }
