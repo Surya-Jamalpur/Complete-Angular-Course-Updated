@@ -22,6 +22,10 @@ import { GameComponent } from './game/game.component';
 import { GameControlComponent } from './game/game-control/game-control.component';
 import { OddComponent } from './game/odd/odd.component';
 import { EvenComponent } from './game/even/even.component';
+import { GamepracticeComponent } from './gamepractice/gamepractice.component';
+import { GpcontrolComponent } from './gamepractice/gpcontrol/gpcontrol.component';
+import { OddgpComponent } from './gamepractice/oddgp/oddgp.component';
+import { EvengpComponent } from './gamepractice/evengp/evengp.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { EvenComponent } from './game/even/even.component';
     GameComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    GamepracticeComponent,
+    GpcontrolComponent,
+    OddgpComponent,
+    EvengpComponent
   ],
   imports: [
     BrowserModule,
