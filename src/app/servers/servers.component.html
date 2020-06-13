@@ -1,6 +1,9 @@
-<h3>hey am in Practice component</h3>
+<h3 appBasic>hey am in Practice component</h3>
 <hr>
-<button class="btn btn-primary" [disabled]="!allowNewServer"
+
+<h1 style="color:gray" appBasicPlus [activeColor]='#ff00ff' [defaultColor]>testing the directive</h1>
+<hr>
+<button appBasic class="btn btn-primary" [disabled]="!allowNewServer"
 (click)="onCreateServer()">Add Server</button>
 
 <p>{{ createServerStatus }}</p>

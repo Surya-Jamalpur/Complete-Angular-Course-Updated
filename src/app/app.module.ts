@@ -26,6 +26,8 @@ import { GamepracticeComponent } from './gamepractice/gamepractice.component';
 import { GpcontrolComponent } from './gamepractice/gpcontrol/gpcontrol.component';
 import { OddgpComponent } from './gamepractice/oddgp/oddgp.component';
 import { EvengpComponent } from './gamepractice/evengp/evengp.component';
+import { basicDirectinve } from './basicDirective/basic.directive';
+import { BasicPlusDirective } from './dirtectives/basic-plus.directive';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { EvengpComponent } from './gamepractice/evengp/evengp.component';
     GamepracticeComponent,
     GpcontrolComponent,
     OddgpComponent,
-    EvengpComponent
+    EvengpComponent,
+    basicDirectinve,
+    BasicPlusDirective
   ],
   imports: [
     BrowserModule,
