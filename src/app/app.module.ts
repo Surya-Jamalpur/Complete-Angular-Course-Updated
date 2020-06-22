@@ -28,6 +28,9 @@ import { OddgpComponent } from './gamepractice/oddgp/oddgp.component';
 import { EvengpComponent } from './gamepractice/evengp/evengp.component';
 import { basicDirectinve } from './basicDirective/basic.directive';
 import { BasicPlusDirective } from './dirtectives/basic-plus.directive';
+import { UnlessDirective } from './dirtectives/unless.directive';
+import { IfNotTrueDirective } from './dirtectives/if-not-true.directive';
+import { DropdownDirective } from './dirtectives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import { BasicPlusDirective } from './dirtectives/basic-plus.directive';
     OddgpComponent,
     EvengpComponent,
     basicDirectinve,
-    BasicPlusDirective
+    BasicPlusDirective,
+    UnlessDirective,
+    IfNotTrueDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
