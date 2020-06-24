@@ -31,6 +31,9 @@ import { BasicPlusDirective } from './dirtectives/basic-plus.directive';
 import { UnlessDirective } from './dirtectives/unless.directive';
 import { IfNotTrueDirective } from './dirtectives/if-not-true.directive';
 import { DropdownDirective } from './dirtectives/dropdown.directive';
+import { AccountsComponent } from './accounts/accounts.component';
+import { AccountCockpitComponent } from './accounts/account-cockpit/account-cockpit.component';
+import { AccountComponent } from './accounts/account/account.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,10 @@ import { DropdownDirective } from './dirtectives/dropdown.directive';
     BasicPlusDirective,
     UnlessDirective,
     IfNotTrueDirective,
-    DropdownDirective
+    DropdownDirective,
+    AccountsComponent,
+    AccountCockpitComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

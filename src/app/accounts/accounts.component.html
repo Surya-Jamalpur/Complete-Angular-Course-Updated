@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1>Started working on services with this component</h1>
+    </div>
+    <div class="col-md-6">
+        <app-account-cockpit (accountCreated)="onAddAcc($event)" ></app-account-cockpit>
+    </div>
+    <div class="col-md-6">
+        <app-account *ngFor = "let accInfo of allAccounts" [account]="accInfo"></app-account>
+    </div>
+</div> 

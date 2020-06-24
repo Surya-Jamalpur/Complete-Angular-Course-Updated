@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-6">
+        <input type="text" [(ngModel)]="newName" />
+    </div>
+    <div class="col-md-6">
+        <input type="text" [(ngModel)]="newAccountNo" />
+    </div>
+    <div class="col-md-6">
+        <input type="text" [(ngModel)]="newAccType" />
+    </div>
+    <div class="col-md-6">
+        <input type="text" [(ngModel)]="newBankName" />
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-primary" (click)="addAcc()" >Add</button>
+    </div>
+    <div class="col-md-6">
+        <button class="btn btn-primary" (click)="updateAcc()" >Update</button>
+    </div>
+</div>
