@@ -31,11 +31,6 @@ export class AccountsComponent implements OnInit {
   ngOnInit() {
   }
   onAddAcc(newAccInfo:{name:string, no:number, type:string, bankName:string}){
-    this.allAccounts.push({
-      name:newAccInfo.name,
-      no:newAccInfo.no,
-      type:newAccInfo.type,
-      bankName:newAccInfo.bankName
-    });
+    this.allAccounts.push(newAccInfo);
   }
 }
