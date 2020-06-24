@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
+import { Component, OnInit, EventEmitter  } from '@angular/core';
 import { LoggingService } from '../../Services/logging.service';
+import { AccountsService } from '../accounts.service';
 
 @Component({
   selector: 'app-account-cockpit',
@@ -12,20 +13,13 @@ export class AccountCockpitComponent implements OnInit {
   newAccountNo:number;
   newAccType:string = '';
   newBankName:string = '';
-
-  @Output() accountCreated = new EventEmitter<{name:string, no:number, type:string, bankName:string}>();
-
-  constructor(private loggingservice:LoggingService) { }
+  constructor(private loggingservice:LoggingService,
+              private accountsService:AccountsService) { }
 
   ngOnInit() {
   }
-  addAcc() {
-    this.accountCreated.emit({
-      name:this.newName,
-      no:this.newAccountNo,
-      type:this.newAccType,
-      bankName:this.newBankName
-    });
+  onAddAccount(name:string, no:number, type:string, bankName:string) {
+    this.accountsService.addAccount(name, no, type, bankName);
     this.loggingservice.LogStatus(this.newName);
   };
   updateAcc() {

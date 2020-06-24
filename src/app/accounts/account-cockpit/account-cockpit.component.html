@@ -12,8 +12,8 @@
         <input type="text" [(ngModel)]="newBankName" />
     </div>
     <div class="col-md-6">
-        <button class="btn btn-primary" (click)="addAcc()" >Add</button>
-    </div>
+        <button class="btn btn-primary" (click)="onAddAccount(newName, newAccountNo, newAccType, newBankName)" >Add</button>
+    </div> 
     <div class="col-md-6">
         <button class="btn btn-primary" (click)="updateAcc()" >Update</button>
     </div>

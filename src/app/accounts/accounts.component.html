@@ -3,9 +3,9 @@
         <h1>Started working on services with this component</h1>
     </div>
     <div class="col-md-6">
-        <app-account-cockpit (accountCreated)="onAddAcc($event)" ></app-account-cockpit>
+        <app-account-cockpit (accountCreated)="onAccountCreated($event)" ></app-account-cockpit>
     </div>
     <div class="col-md-6">
-        <app-account *ngFor = "let accInfo of allAccounts" [account]="accInfo"></app-account>
+        <app-account *ngFor = "let accInfo of accounts" [account]="accInfo"></app-account>
     </div>
 </div> 

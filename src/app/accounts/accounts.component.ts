@@ -1,36 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountsService } from './accounts.service';
 
 @Component({
   selector: 'app-accounts',
   templateUrl: './accounts.component.html',
-  styleUrls: ['./accounts.component.scss']
+  styleUrls: ['./accounts.component.scss'],
+  providers:[AccountsService]
 })
 export class AccountsComponent implements OnInit {
-  allAccounts: any[] = [
-    {
-      name:'J. Surya',
-      no:62041958963,
-      type:"savings",
-      bankName:'SBI Bank'
-    },
-    {
-      name:'Surya Prakash',
-      no:7766544000,
-      type:"savings",
-      bankName:'Icici Bank'
-    },
-    {
-      name:'Jamalpur Surya',
-      no:223366880098,
-      type:"savings",
-      bankName:'HDFC Bank'
-    },
-  ];
-  constructor() { }
+  accounts:any[] = [];
+  constructor(private accountsService:AccountsService) { }
 
   ngOnInit() {
+    this.accounts = this.accountsService.allAccounts;
   }
-  onAddAcc(newAccInfo:{name:string, no:number, type:string, bankName:string}){
-    this.allAccounts.push(newAccInfo);
-  }
+  
 }

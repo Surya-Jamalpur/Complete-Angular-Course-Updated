@@ -21,12 +21,10 @@ export class AccountsService {
           bankName:'HDFC Bank'
         },
       ];
-      onAddAcc(newAccInfo:{name:string, no:number, type:string, bankName:string}){
-        this.allAccounts.push({
-          name:newAccInfo.name,
-          no:newAccInfo.no,
-          type:newAccInfo.type,
-          bankName:newAccInfo.bankName
-        });
+      addAccount(name:string, no:number, type:string, bankName:string){
+        this.allAccounts.push({name:name, no:no, type:type, bankName:bankName});
       }
+      // updateAccount(name:string, no:number, type:string, bankName:string){
+      //   this.allAccounts.push();
+      // }
 }
