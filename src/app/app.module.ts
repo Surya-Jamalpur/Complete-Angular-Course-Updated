@@ -34,6 +34,9 @@ import { DropdownDirective } from './dirtectives/dropdown.directive';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AccountCockpitComponent } from './accounts/account-cockpit/account-cockpit.component';
 import { AccountComponent } from './accounts/account/account.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductCokpitComponent } from './products/product-cokpit/product-cokpit.component';
+import { ProductDetailsComponent } from './products/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +71,10 @@ import { AccountComponent } from './accounts/account/account.component';
     DropdownDirective,
     AccountsComponent,
     AccountCockpitComponent,
-    AccountComponent
+    AccountComponent,
+    ProductsComponent,
+    ProductCokpitComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
