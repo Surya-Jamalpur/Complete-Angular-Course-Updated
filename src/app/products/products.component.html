@@ -3,7 +3,9 @@
         <h1>This is to Practice Services More..!</h1>
     </div>
     <div class="col-md-6">
+            <app-product-details *ngFor="let productInfo of products" [product]="productInfo" ></app-product-details>
     </div>
     <div class="col-md-6">
+            <app-product-cokpit></app-product-cokpit>
     </div>
 </div> 

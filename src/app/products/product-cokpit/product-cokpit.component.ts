@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-product-cokpit',
   templateUrl: './product-cokpit.component.html',
-  styleUrls: ['./product-cokpit.component.scss']
+  styleUrls: ['./product-cokpit.component.scss'],
+  providers:[]
 })
 export class ProductCokpitComponent implements OnInit {
 
-  constructor() { }
+  constructor(private productsService:ProductsService) { }
 
   ngOnInit() {
+  }
+  addProduct(name:string, price:number) {
+    this.productsService.onAddProduct(name, price);
   }
 
 }
