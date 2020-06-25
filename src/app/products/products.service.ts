@@ -1,5 +1,7 @@
+import { LoggingService } from '../Services/logging.service';
+import { Injectable, EventEmitter } from '@angular/core';
 
-
+@Injectable()
 export class ProductsService {
     productsList:{name:string, price:number}[] = [
         {
@@ -15,7 +17,12 @@ export class ProductsService {
           price:20000
         }
       ];
+      productSelected = new EventEmitter<any>();
+
+      constructor(private loggingService:LoggingService){}
       onAddProduct(newProductName:string, newProductPrice:number){
-          this.productsList.push({name:newProductName, price:newProductPrice})
+          this.productsList.push({name:newProductName, price:newProductPrice});
+          this.loggingService.LogStatus(newProductName);
       }
+      
 }

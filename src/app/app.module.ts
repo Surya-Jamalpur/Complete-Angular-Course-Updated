@@ -37,6 +37,9 @@ import { AccountComponent } from './accounts/account/account.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductCokpitComponent } from './products/product-cokpit/product-cokpit.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
+import { LoggingService } from './Services/logging.service';
+import { AccountsService } from './accounts/accounts.service';
+import { ProductsService } from './products/products.service';
 
 @NgModule({
   declarations: [
@@ -80,7 +83,7 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoggingService, AccountsService, ProductsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

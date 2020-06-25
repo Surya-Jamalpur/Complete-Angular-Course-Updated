@@ -9,7 +9,11 @@ import { ProductsService } from '../products.service';
 })
 export class ProductCokpitComponent implements OnInit {
 
-  constructor(private productsService:ProductsService) { }
+  constructor(private productsService:ProductsService) {
+    this.productsService.productSelected.subscribe(
+      (selectedproduct) => alert('Selected Product Name ' + selectedproduct.name + ' and price '+ selectedproduct.price)
+    );
+   }
 
   ngOnInit() {
   }
