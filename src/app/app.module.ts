@@ -40,6 +40,10 @@ import { ProductDetailsComponent } from './products/product-details/product-deta
 import { LoggingService } from './Services/logging.service';
 import { AccountsService } from './accounts/accounts.service';
 import { ProductsService } from './products/products.service';
+import { BrandsComponent } from './brands/brands.component';
+import { BrandItemComponent } from './brands/brand-item/brand-item.component';
+import { BrandDetailsComponent } from './brands/brand-details/brand-details.component';
+import { BrandCockpitComponent } from './brands/brand-cockpit/brand-cockpit.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +81,11 @@ import { ProductsService } from './products/products.service';
     AccountComponent,
     ProductsComponent,
     ProductCokpitComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    BrandsComponent,
+    BrandItemComponent,
+    BrandDetailsComponent,
+    BrandCockpitComponent
   ],
   imports: [
     BrowserModule,
