@@ -9,11 +9,17 @@ import { BrandsService } from './brands.service';
   providers:[BrandsService]
 })
 export class BrandsComponent implements OnInit {
-brands: Brand[];
+brands: Brand[] = [];
   constructor(private brandsService:BrandsService) { }
 
   ngOnInit() {
     this.brands = this.brandsService.getBrands();
+    this.brandsService.brandsAdded
+    .subscribe(
+      (brand:Brand[]) => {
+        this.brands = brand;
+      }
+    )
   }
 
 }

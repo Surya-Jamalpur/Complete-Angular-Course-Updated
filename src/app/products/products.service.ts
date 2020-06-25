@@ -20,6 +20,7 @@ export class ProductsService {
       productSelected = new EventEmitter<any>();
 
       constructor(private loggingService:LoggingService){}
+      
       onAddProduct(newProductName:string, newProductPrice:number){
           this.productsList.push({name:newProductName, price:newProductPrice});
           this.loggingService.LogStatus(newProductName);

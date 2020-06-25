@@ -1,1 +1,11 @@
-<p>brand-cockpit works!</p>
+
+<label for="">
+    Brand Name
+</label>
+<input type="text" [(ngModel)]="newBrandName" class="form-control" />
+
+<label for="">
+    Location
+</label>
+<input type="text" [(ngModel)]="newBrandLocation" class="form-control" />
+<button class="btn btn-primary" (click)="addBrand(newBrandName, newBrandLocation)" >Add Brand</button>
