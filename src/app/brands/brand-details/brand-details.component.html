@@ -1,1 +1,8 @@
-<p>brand-details works!</p>
+
+<div *ngIf="currentBrand; else notSelected" class="nameofbrand">
+        {{currentBrand.brandName}}
+        <span class="loc">{{currentBrand.location}}</span>
+</div>
+<ng-template #notSelected>
+                <div class="nobrands">Please selecte Brand</div>
+            </ng-template>

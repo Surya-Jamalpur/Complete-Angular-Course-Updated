@@ -1,1 +1,16 @@
-<p>brands works!</p>
+<div class="row">
+    <div class="col-md-12">
+        <h1>
+            this component created to practice services.
+        </h1>
+    </div>
+    <div class="col-md-4">
+        <app-brand-cockpit></app-brand-cockpit>
+    </div>
+    <div class="col-md-4">
+        <app-brand-item *ngFor="let brand of brands" [brandData]="brand"></app-brand-item>
+    </div>
+    <div class="col-md-4">
+        <app-brand-details></app-brand-details>        
+    </div>
+</div>
