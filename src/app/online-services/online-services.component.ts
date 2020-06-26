@@ -13,6 +13,12 @@ export class OnlineServicesComponent implements OnInit {
 
   ngOnInit() {
     this.onlineServices = this.olsService.getOlsList();
+    this.olsService.olsadded
+    .subscribe(
+      (ols:ols[]) => {
+        this.onlineServices = ols;
+      }
+    )
   }
 
 }
