@@ -3,7 +3,8 @@
     
     <div class="row">
         <div class="col-md-12">
-            <app-game *ngIf="loadedRoute === 'Game'"></app-game>
+            <router-outlet></router-outlet>
+            <!-- <app-game *ngIf="loadedRoute === 'Game'"></app-game>
             <app-gamepractice *ngIf="loadedRoute === 'Game2'"></app-gamepractice>
             <app-servers-and-blueprints *ngIf="loadedRoute === 'Servers'"></app-servers-and-blueprints>
             <app-employee-list *ngIf="loadedRoute === 'Employees'"></app-employee-list>
@@ -13,7 +14,7 @@
             <app-accounts *ngIf="loadedRoute === 'accounts'"></app-accounts>
             <app-products *ngIf="loadedRoute === 'products'"></app-products>
             <app-brands *ngIf="loadedRoute === 'brands'"></app-brands>
-            <app-online-services *ngIf="loadedRoute === 'ols'"></app-online-services>
+            <app-online-services *ngIf="loadedRoute === 'ols'"></app-online-services> -->
         </div>
     </div>
 </div>

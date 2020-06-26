@@ -4,14 +4,14 @@
     </div>
     <div class="col-md-12">
         <h4>{{ currentRecipe.name }}</h4>
-        <img [src]="currentRecipe.imagePath" class="img-fluid" alt="">
+        <img [src]="currentRecipe.imagePath" style="height: 200px;" class="img-fluid" alt="">
     </div>
     
     <div class="col-md-12">
         <div appDropdown class="btn-group">
             <button class="btn btn-primary dropdown-toggle">Manage Recipe <span class="caret"></span></button>
             <ul  class="dropdown-menu">
-                <li><a href="#">To Shopping List</a></li>
+                <li><a (click)="addIngredientsToSAhoppingList()" >To Shopping List</a></li>
                 <li><a href="#">Edit Recipe</a></li>
                 <li><a href="#">Delete Recipe</a></li>
             </ul>
@@ -24,5 +24,12 @@
 
     <div class="col-md-12">
         <p>Ingrediants</p>
+
+        <ul class="list-group">
+                <a style="cursor: pointer;"
+                *ngFor="let x of currentRecipe.ingredients" class="list-group-item">
+                {{x.name}} ({{x.amount}})
+                </a>
+            </ul>
     </div>
 </div>

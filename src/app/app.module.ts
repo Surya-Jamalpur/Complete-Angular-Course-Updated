@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router'
 
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -48,7 +49,22 @@ import { OnlineServicesComponent } from './online-services/online-services.compo
 import { AddOlsComponent } from './online-services/add-ols/add-ols.component';
 import { OlsDetailsComponent } from './online-services/ols-details/ols-details.component';
 import { OlsComponent } from './online-services/ols/ols.component';
+import { ShoppingListService } from './shopping-list/shoppingList.service';
 
+const appRoutes:Routes = [
+  {path:'', component:RecipesComponent},
+  {path:'recipes', component:RecipesComponent},
+  {path:'shopping-list', component:ShoppingListComponent},
+  {path:'employees', component:EmployeeListComponent},
+  {path:'game', component:GameComponent},
+  {path:'game2', component:GamepracticeComponent},
+  {path:'servers', component:ServersAndBlueprintsComponent},
+  {path:'myPractices', component:ServersComponent},
+  {path:'accounts', component:AccountsComponent},
+  {path:'products', component:ProductsComponent},
+  {path:'brands', component:BrandsComponent},
+  {path:'online-services', component:OnlineServicesComponent}
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -97,9 +113,10 @@ import { OlsComponent } from './online-services/ols/ols.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
-  providers: [LoggingService, AccountsService, ProductsService],
+  providers: [LoggingService, AccountsService, ProductsService, ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
