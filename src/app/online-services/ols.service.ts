@@ -1,4 +1,5 @@
 import { ols } from './ols.model';
+import { EventEmitter } from '@angular/core';
 
 export class OLSService {
     private olsList: ols[] = [
@@ -13,11 +14,13 @@ export class OLSService {
             duration:'6 months'
         }
     ];
+    olsadded = new EventEmitter<ols[]>();
     getOlsList() {
-        this.olsList.slice();
+        return this.olsList.slice();
     }
     
-    onAddOls(){
-
+    onAddOls(newName:string, newCost:number, newDuration:string){
+        this.olsList.push({name:newName, cost:newCost, duration:newDuration});
+        this.olsadded.emit(this.olsList.slice());
     }
 }

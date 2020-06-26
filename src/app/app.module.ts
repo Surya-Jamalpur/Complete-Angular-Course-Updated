@@ -46,7 +46,6 @@ import { BrandDetailsComponent } from './brands/brand-details/brand-details.comp
 import { BrandCockpitComponent } from './brands/brand-cockpit/brand-cockpit.component';
 import { OnlineServicesComponent } from './online-services/online-services.component';
 import { AddOlsComponent } from './online-services/add-ols/add-ols.component';
-import { OnlineserviceComponent } from './online-services/onlineservice/onlineservice.component';
 import { OlsDetailsComponent } from './online-services/ols-details/ols-details.component';
 import { OlsComponent } from './online-services/ols/ols.component';
 
@@ -93,7 +92,6 @@ import { OlsComponent } from './online-services/ols/ols.component';
     BrandCockpitComponent,
     OnlineServicesComponent,
     AddOlsComponent,
-    OnlineserviceComponent,
     OlsDetailsComponent,
     OlsComponent
   ],

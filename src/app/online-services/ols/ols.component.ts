@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ols } from '../ols.model';
 
 @Component({
   selector: 'app-ols',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ols.component.scss']
 })
 export class OlsComponent implements OnInit {
-
+@Input() olsItem:ols;
   constructor() { }
 
   ngOnInit() {
