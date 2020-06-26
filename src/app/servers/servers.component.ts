@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-servers',
@@ -12,7 +13,7 @@ export class ServersComponent implements OnInit {
   testngif='';
   showContent:boolean = false;
   logs = [];
-  constructor() {
+  constructor(private router:Router, private route:ActivatedRoute) {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000);
@@ -20,6 +21,10 @@ export class ServersComponent implements OnInit {
 
   ngOnInit() {
     
+  }
+  onDynamicNav() {
+    //after some func
+    this.router.navigate(['myPractices'], {relativeTo:this.route});
   }
   onCreateServer() {
 this.createServerStatus = 'Server was Created..!'
