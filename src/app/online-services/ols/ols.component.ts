@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ols } from '../ols.model';
+import { OLSService } from '../ols.service';
 
 @Component({
   selector: 'app-ols',
@@ -8,9 +9,12 @@ import { ols } from '../ols.model';
 })
 export class OlsComponent implements OnInit {
 @Input() olsItem:ols;
-  constructor() { }
+  constructor(private olsService:OLSService) { }
 
   ngOnInit() {
   }
+  getDeatils(selectedOls:ols){
+    this.olsService.onOlsSelected.emit(selectedOls);
 
+  }
 }

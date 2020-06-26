@@ -15,6 +15,7 @@ export class OLSService {
         }
     ];
     olsadded = new EventEmitter<ols[]>();
+    onOlsSelected = new EventEmitter<ols>();
     getOlsList() {
         return this.olsList.slice();
     }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ols } from '../ols.model';
+import { OLSService } from '../ols.service';
 
 @Component({
   selector: 'app-ols-details',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ols-details.component.scss']
 })
 export class OlsDetailsComponent implements OnInit {
-
-  constructor() { }
+  currentOls:ols;
+  constructor(private olsService:OLSService) { }
 
   ngOnInit() {
+    this.olsService.onOlsSelected
+    .subscribe(
+      (ols:ols) => {
+        this.currentOls = ols;
+      }
+    )
   }
 
 }
