@@ -44,6 +44,10 @@ import { BrandsComponent } from './brands/brands.component';
 import { BrandItemComponent } from './brands/brand-item/brand-item.component';
 import { BrandDetailsComponent } from './brands/brand-details/brand-details.component';
 import { BrandCockpitComponent } from './brands/brand-cockpit/brand-cockpit.component';
+import { OnlineServicesComponent } from './online-services/online-services.component';
+import { AddOlsComponent } from './online-services/add-ols/add-ols.component';
+import { OnlineserviceComponent } from './online-services/onlineservice/onlineservice.component';
+import { OlsDetailsComponent } from './online-services/ols-details/ols-details.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +89,11 @@ import { BrandCockpitComponent } from './brands/brand-cockpit/brand-cockpit.comp
     BrandsComponent,
     BrandItemComponent,
     BrandDetailsComponent,
-    BrandCockpitComponent
+    BrandCockpitComponent,
+    OnlineServicesComponent,
+    AddOlsComponent,
+    OnlineserviceComponent,
+    OlsDetailsComponent
   ],
   imports: [
     BrowserModule,
