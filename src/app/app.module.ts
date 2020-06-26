@@ -48,6 +48,7 @@ import { OnlineServicesComponent } from './online-services/online-services.compo
 import { AddOlsComponent } from './online-services/add-ols/add-ols.component';
 import { OnlineserviceComponent } from './online-services/onlineservice/onlineservice.component';
 import { OlsDetailsComponent } from './online-services/ols-details/ols-details.component';
+import { OlsComponent } from './online-services/ols/ols.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { OlsDetailsComponent } from './online-services/ols-details/ols-details.c
     OnlineServicesComponent,
     AddOlsComponent,
     OnlineserviceComponent,
-    OlsDetailsComponent
+    OlsDetailsComponent,
+    OlsComponent
   ],
   imports: [
     BrowserModule,

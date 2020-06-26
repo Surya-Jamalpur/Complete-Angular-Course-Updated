@@ -1,1 +1,11 @@
-<p>online-services works!</p>
+<div class="row">
+    <div class="col-md-4">
+        <app-onlineservice *ngFor="let ols of onlineServices" [olsItem]="ols" ></app-onlineservice>
+    </div>
+    <div class="col-md-4">
+        <app-add-ols></app-add-ols>
+    </div>
+    <div class="col-md-4">
+        <app-ols-details></app-ols-details>
+    </div>
+</div>
