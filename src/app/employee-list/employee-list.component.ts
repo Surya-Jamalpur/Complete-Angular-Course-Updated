@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee-list',
@@ -10,7 +11,7 @@ export class EmployeeListComponent implements OnInit {
     {empName:'Raghu Ram', empID:22335566, empEmail:'reghuram@prolifics.com', empPhone:9966552233},
     {empName:'Raghu Ram', empID:22335566, empEmail:'reghuram@prolifics.com', empPhone:9966552233}
   ];
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -21,5 +22,8 @@ export class EmployeeListComponent implements OnInit {
       empEmail:empData.empEmail,
       empPhone:empData.empPhone
     });
+  }
+  gotoemployee(){
+    this.router.navigate(['/employee']);
   }
 }

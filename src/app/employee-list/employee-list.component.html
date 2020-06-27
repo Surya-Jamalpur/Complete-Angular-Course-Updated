@@ -6,4 +6,5 @@
         <h3> employee List</h3>
         <app-employee *ngFor="let employeeData of employeeList" [employee]="employeeData"></app-employee>
     </div>
+    <button class="btn btn-primary" (click)="gotoemployee(employeeData)" >go to employee component</button>
 </div>
