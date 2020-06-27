@@ -57,7 +57,7 @@ const appRoutes:Routes = [
   {path:'recipes', component:RecipesComponent},
   {path:'shopping-list', component:ShoppingListComponent},
   {path:'employees', component:EmployeeListComponent},
-  {path:'employee/:name/:id/:email/:phone', component:EmployeeComponent},
+  {path:'nav/:name/:id', component:NavPracticeComponent},
   {path:'game', component:GameComponent},
   {path:'game2', component:GamepracticeComponent},
   {path:'servers', component:ServersAndBlueprintsComponent},
