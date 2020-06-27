@@ -50,12 +50,14 @@ import { AddOlsComponent } from './online-services/add-ols/add-ols.component';
 import { OlsDetailsComponent } from './online-services/ols-details/ols-details.component';
 import { OlsComponent } from './online-services/ols/ols.component';
 import { ShoppingListService } from './shopping-list/shoppingList.service';
+import { NavPracticeComponent } from './nav-practice/nav-practice.component';
 
 const appRoutes:Routes = [
   {path:'', component:RecipesComponent},
   {path:'recipes', component:RecipesComponent},
   {path:'shopping-list', component:ShoppingListComponent},
   {path:'employees', component:EmployeeListComponent},
+  {path:'employee/:name/:id/:email/:phone', component:EmployeeComponent},
   {path:'game', component:GameComponent},
   {path:'game2', component:GamepracticeComponent},
   {path:'servers', component:ServersAndBlueprintsComponent},
@@ -109,7 +111,8 @@ const appRoutes:Routes = [
     OnlineServicesComponent,
     AddOlsComponent,
     OlsDetailsComponent,
-    OlsComponent
+    OlsComponent,
+    NavPracticeComponent
   ],
   imports: [
     BrowserModule,
