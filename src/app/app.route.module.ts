@@ -26,7 +26,9 @@ const appRoutes:Routes = [
     {path:'accounts', component:AccountsComponent},
     {path:'products', component:ProductsComponent},
     {path:'brands', component:BrandsComponent},
-    {path:'online-services', component:OnlineServicesComponent}
+    {path:'online-services', component:OnlineServicesComponent},
+    {path:'**', redirectTo:'/'}
+
   ]
 @NgModule({
 imports:[
