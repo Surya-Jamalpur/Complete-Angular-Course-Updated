@@ -51,22 +51,9 @@ import { OlsDetailsComponent } from './online-services/ols-details/ols-details.c
 import { OlsComponent } from './online-services/ols/ols.component';
 import { ShoppingListService } from './shopping-list/shoppingList.service';
 import { NavPracticeComponent } from './nav-practice/nav-practice.component';
+import { AppRouterModule } from './app.route.module';
 
-const appRoutes:Routes = [
-  {path:'', component:RecipesComponent},
-  {path:'recipes', component:RecipesComponent},
-  {path:'shopping-list', component:ShoppingListComponent},
-  {path:'employees', component:EmployeeListComponent},
-  {path:'nav/:name/:id', component:NavPracticeComponent},
-  {path:'game', component:GameComponent},
-  {path:'game2', component:GamepracticeComponent},
-  {path:'servers', component:ServersAndBlueprintsComponent},
-  {path:'myPractices', component:ServersComponent},
-  {path:'accounts', component:AccountsComponent},
-  {path:'products', component:ProductsComponent},
-  {path:'brands', component:BrandsComponent},
-  {path:'online-services', component:OnlineServicesComponent}
-]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -117,7 +104,7 @@ const appRoutes:Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    AppRouterModule
   ],
   providers: [LoggingService, AccountsService, ProductsService, ShoppingListService],
   bootstrap: [AppComponent]
