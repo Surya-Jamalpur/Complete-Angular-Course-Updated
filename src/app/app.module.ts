@@ -52,6 +52,8 @@ import { OlsComponent } from './online-services/ols/ols.component';
 import { ShoppingListService } from './shopping-list/shoppingList.service';
 import { NavPracticeComponent } from './nav-practice/nav-practice.component';
 import { AppRouterModule } from './app.route.module';
+import { AuthGuard } from './auth-guard.service';
+import { AuthService } from './auth.service';
 
 
 @NgModule({
@@ -106,7 +108,12 @@ import { AppRouterModule } from './app.route.module';
     FormsModule,
     AppRouterModule
   ],
-  providers: [LoggingService, AccountsService, ProductsService, ShoppingListService],
+  providers: [LoggingService,
+    AccountsService,
+    ProductsService,
+    ShoppingListService,
+    AuthGuard,
+    AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

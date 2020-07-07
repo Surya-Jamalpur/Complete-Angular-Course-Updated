@@ -12,12 +12,13 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { ProductsComponent } from './products/products.component';
 import { BrandsComponent } from './brands/brands.component';
 import { OnlineServicesComponent } from './online-services/online-services.component';
+import { AuthGuard } from './auth-guard.service';
 
 const appRoutes:Routes = [
     {path:'', component:RecipesComponent},
     {path:'recipes', component:RecipesComponent},
     {path:'shopping-list', component:ShoppingListComponent},
-    {path:'employees', component:EmployeeListComponent},
+    {path:'employees', canActivate:[AuthGuard], component:EmployeeListComponent},
     {path:'nav/:name/:id', component:NavPracticeComponent},
     {path:'game', component:GameComponent},
     {path:'game2', component:GamepracticeComponent},
@@ -25,7 +26,7 @@ const appRoutes:Routes = [
     {path:'myPractices', component:ServersComponent},
     {path:'accounts', component:AccountsComponent},
     {path:'products', component:ProductsComponent},
-    {path:'brands', component:BrandsComponent},
+    {path:'brands', canActivate:[AuthGuard], component:BrandsComponent},
     {path:'online-services', component:OnlineServicesComponent},
     {path:'**', redirectTo:'/'}
 
