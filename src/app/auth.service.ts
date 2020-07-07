@@ -1,10 +1,10 @@
 export class AuthService {
     loggedIn = false;
 
-    login(){
+    onLogin(){
         this.loggedIn = true;
     }
-    logout(){
+    onLogout(){
         this.loggedIn = false;
     }
     isAuthenticated() {
