@@ -4,12 +4,6 @@
         (recipeWasSelected)="currentRecipe = $event"></app-recipe-list>
     </div>
     <div class="col-md-7">
-        <app-recipe-details
-        *ngIf="currentRecipe; else nocurrentRecipe"
-        [currentRecipe]="currentRecipe"></app-recipe-details>
-
-        <ng-template #nocurrentRecipe>
-            <p>Please Select a Recipe..!</p>
-        </ng-template>
+        <router-outlet></router-outlet>
     </div>
 </div>

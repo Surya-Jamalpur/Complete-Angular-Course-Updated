@@ -13,10 +13,15 @@ import { ProductsComponent } from './products/products.component';
 import { BrandsComponent } from './brands/brands.component';
 import { OnlineServicesComponent } from './online-services/online-services.component';
 import { AuthGuard } from './auth-guard.service';
+import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
+import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 
 const appRoutes:Routes = [
     {path:'', component:RecipesComponent},
-    {path:'recipes', component:RecipesComponent},
+    {path:'recipes', component:RecipesComponent, children:[
+        { path:'', component:NoRecipeComponent},
+        { path:':id', component:RecipeDetailsComponent},
+    ]},
     {path:'shopping-list', component:ShoppingListComponent},
     {path:'employees', canActivate:[AuthGuard], component:EmployeeListComponent},
     {path:'nav/:name/:id', component:NavPracticeComponent},

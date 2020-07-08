@@ -54,6 +54,7 @@ import { NavPracticeComponent } from './nav-practice/nav-practice.component';
 import { AppRouterModule } from './app.route.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
+import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
 
 
 @NgModule({
@@ -101,7 +102,8 @@ import { AuthService } from './auth.service';
     AddOlsComponent,
     OlsDetailsComponent,
     OlsComponent,
-    NavPracticeComponent
+    NavPracticeComponent,
+    NoRecipeComponent
   ],
   imports: [
     BrowserModule,
