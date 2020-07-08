@@ -15,12 +15,15 @@ import { OnlineServicesComponent } from './online-services/online-services.compo
 import { AuthGuard } from './auth-guard.service';
 import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
 import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 const appRoutes:Routes = [
-    {path:'', component:RecipesComponent},
+    {path:'', redirectTo:'/recipes', pathMatch:'full'},
     {path:'recipes', component:RecipesComponent, children:[
         { path:'', component:NoRecipeComponent},
+        { path:'new', component:RecipeEditComponent},
         { path:':id', component:RecipeDetailsComponent},
+        { path:':id/edit', component:RecipeEditComponent},
     ]},
     {path:'shopping-list', component:ShoppingListComponent},
     {path:'employees', canActivate:[AuthGuard], component:EmployeeListComponent},

@@ -55,6 +55,7 @@ import { AppRouterModule } from './app.route.module';
 import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -103,7 +104,8 @@ import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
     OlsDetailsComponent,
     OlsComponent,
     NavPracticeComponent,
-    NoRecipeComponent
+    NoRecipeComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
