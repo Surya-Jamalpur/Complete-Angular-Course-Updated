@@ -16,6 +16,7 @@ import { AuthGuard } from './auth-guard.service';
 import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
 import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 const appRoutes:Routes = [
     {path:'', redirectTo:'/recipes', pathMatch:'full'},
@@ -34,6 +35,7 @@ const appRoutes:Routes = [
     {path:'myPractices', component:ServersComponent},
     {path:'accounts', component:AccountsComponent},
     {path:'products', component:ProductsComponent},
+    {path:'observables', component:ObservablesComponent},
     {path:'brands', canActivate:[AuthGuard], component:BrandsComponent},
     {path:'online-services', component:OnlineServicesComponent},
     {path:'**', redirectTo:'/'}
