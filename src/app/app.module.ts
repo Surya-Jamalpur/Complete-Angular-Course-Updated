@@ -56,6 +56,7 @@ import { AuthGuard } from './auth-guard.service';
 import { AuthService } from './auth.service';
 import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { ObservablesComponent } from './observables/observables.component';
 
 
 @NgModule({
@@ -105,7 +106,8 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     OlsComponent,
     NavPracticeComponent,
     NoRecipeComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    ObservablesComponent
   ],
   imports: [
     BrowserModule,
