@@ -21,14 +21,18 @@ private firstObsSubscription:Subscription;
       let x = 1;
       setInterval(() => {
         observer.next(x);
+        if(x > 3) {
+          observer.error(new Error('the x exceeds more than 3.'));
+        }
         x++;
       },1000);
     });
     // creating custom Observable ends
-    // Subscribing the observable
-    
+    // Subscribing the custom observable    
     this.firstObsSubscription = customIntervalObservable.subscribe(data => {
       console.log(data);
+    }, error => {
+      console.log(error);
     });
     // NOTE: subscribe(() => {}) and subscribe(data => {}) both gives the same output
   };
