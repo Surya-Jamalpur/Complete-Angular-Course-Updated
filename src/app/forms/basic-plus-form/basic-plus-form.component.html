@@ -2,7 +2,12 @@
 
 <form action="" #basicForm="ngForm" (ngSubmit)="onSubmit(basicForm)" >
     <div class="row">
-    <div class="col-md-6">
+        <div class="col-md-12">
+                <h6 style="color:green">here we are grouping name and email and by grouping like this, we get userinf obj with name and email properties
+                    
+                </h6>
+            <div class="row" ngModelGroup="userinfo">
+            <div class="col-md-6">
         <label>Name</label>
         <input type="text" name="name" class="form-control" ngModel required >
     </div>
@@ -15,6 +20,9 @@
 
         {{basicForm.submitted}}
     </div>
+    </div>
+        </div>
+        
     <div class="col-md-6">
         <label>one way binding</label>
         <input type="text" name="oneway" class="form-control" [ngModel]="oneway" required >
