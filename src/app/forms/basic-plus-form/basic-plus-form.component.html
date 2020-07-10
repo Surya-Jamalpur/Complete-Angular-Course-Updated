@@ -1,1 +1,32 @@
-<h1>this is basic plus form component </h1>
+<h5 style="color:red">here we are hilighting the invalid inputs</h5>
+
+<form action="" #basicForm="ngForm" (ngSubmit)="onSubmit(basicForm)" >
+    <div class="row">
+    <div class="col-md-6">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" ngModel required >
+    </div>
+    
+    <div class="col-md-6">
+        <label>email</label>
+        <input type="text" name="email" class="form-control" ngModel required #email="ngModel" >
+        <span style="color: red" 
+        *ngIf="!email.valid && email.touched || basicForm.submitted && !email.valid">Please enter a valid email</span>
+
+        {{basicForm.submitted}}
+    </div>
+    <div class="col-md-6">
+        <label>one way binding</label>
+        <input type="text" name="oneway" class="form-control" [ngModel]="oneway" required >
+        {{oneway}}
+    </div>
+    <div class="col-md-6">
+        <label>Two way binding</label>
+        <input type="text" name="twoway" class="form-control" [(ngModel)]="twoway" required >
+        {{twoway}}
+    </div>
+    <div class="col-md-6">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</div>
+</form>
