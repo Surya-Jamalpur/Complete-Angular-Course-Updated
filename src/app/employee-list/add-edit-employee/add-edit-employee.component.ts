@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-edit-employee',
@@ -25,5 +26,8 @@ export class AddEditEmployeeComponent implements OnInit {
       empEmail:this.email,
       empPhone:this.ePhone
     });
+  }
+  onSubmit(addForm: NgForm){
+    console.log(addForm);
   }
 }
