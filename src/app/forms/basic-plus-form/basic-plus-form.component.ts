@@ -11,12 +11,25 @@ export class BasicPlusFormComponent implements OnInit {
   twoway='this is a Two way data binding Input..';
 
   genders = ['male', 'female'];
+
+  userdataentered = {
+    uname:'',
+    email:'',
+    gender:'',
+    oneway:'',
+    twoway:'',
+  };
   constructor() { }
 
   ngOnInit() {
   }
   onSubmit(formdata: NgForm){
     console.log(formdata);
+    this.userdataentered.uname = formdata.value.userinfo.name;
+    this.userdataentered.email = formdata.value.userinfo.email;
+    this.userdataentered.oneway = formdata.value.oneway;
+    this.userdataentered.twoway = formdata.value.twoway;
+    this.userdataentered.gender = formdata.value.gender;
   }
 
 }

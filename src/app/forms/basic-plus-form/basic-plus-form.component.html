@@ -17,8 +17,6 @@
         <input type="text" name="email" class="form-control" ngModel required #email="ngModel" >
         <span style="color: red" 
         *ngIf="!email.valid && email.touched || basicForm.submitted && !email.valid">Please enter a valid email</span>
-
-        {{basicForm.submitted}}
     </div>
     </div>
         </div>
@@ -30,7 +28,7 @@
     </div>
     <div class="col-md-6">
         <label>Two way binding</label>
-        <input type="text" name="twoway" class="form-control" [(ngModel)]="twoway" required >
+        <input type="text" name="twoway" class="form-control" [(ngModel)]="twoway" required />
         {{twoway}}
     </div>
     <div class="col-md-6">
@@ -45,3 +43,15 @@
     </div>
 </div>
 </form>
+<hr>
+
+<h3 style="color: chocolate" *ngIf="!basicForm.submitted">
+    Please fill the form above and  submit to see your data</h3>
+    <h3 *ngIf="basicForm.submitted"> your data</h3>
+<div *ngIf="basicForm.submitted">
+        <p>user name: {{ userdataentered.uname }} </p>
+        <p>user email: {{ userdataentered.email }} </p>
+        <p>Gender : {{ userdataentered.gender }} </p>
+        <p>one way Data: {{ userdataentered.oneway }} </p>
+        <p>two way Data: {{ userdataentered.twoway }} </p>
+</div>
