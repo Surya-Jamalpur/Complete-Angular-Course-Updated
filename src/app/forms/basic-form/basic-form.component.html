@@ -1,6 +1,35 @@
-<div class="row">
+<h5 style="color:green">Try submit and see console, will get the complete form object</h5>
+
+<form action="" #basicForm="ngForm" (ngSubmit)="onSubmit(basicForm)" >
+    <div class="row">
     <div class="col-md-6">
         <label>Name</label>
-        <input type="text" name="name" class="form-control" >
+        <input type="text" name="name" class="form-control" ngModel >
+    </div>
+    <div class="col-md-6">
+        <label>email</label>
+        <input type="text" name="email" class="form-control" ngModel >
+    </div>
+    <div class="col-md-6">
+        <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 </div>
+</form>
+<hr>
+<h5 style="color:green">here we useing local ref to get form details using @viewChild</h5>
+
+<form action="" #basic2="ngForm" (ngSubmit)="onSubmit2()" >
+    <div class="row">
+    <div class="col-md-6">
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" ngModel >
+    </div>
+    <div class="col-md-6">
+        <label>email</label>
+        <input type="text" name="email" class="form-control" ngModel >
+    </div>
+    <div class="col-md-6">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</div>
+</form>

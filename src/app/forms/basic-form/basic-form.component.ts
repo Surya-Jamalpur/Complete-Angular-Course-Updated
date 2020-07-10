@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { EHOSTUNREACH } from 'constants';
 
 @Component({
   selector: 'app-basic-form',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basic-form.component.scss']
 })
 export class BasicFormComponent implements OnInit {
-
+@ViewChild('basic2', {static:true}) loginForm:NgForm;
   constructor() { }
 
   ngOnInit() {
   }
-
+  onSubmit(sasa: NgForm){
+    console.log(sasa);
+  }
+  onSubmit2(){
+    console.log(this.loginForm);
+  }
 }
