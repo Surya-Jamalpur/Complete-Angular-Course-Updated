@@ -58,6 +58,8 @@ import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { ObservablesComponent } from './observables/observables.component';
 import { FormsComponent } from './forms/forms.component';
+import { BasicFormComponent } from './forms/basic-form/basic-form.component';
+import { BasicPlusFormComponent } from './forms/basic-plus-form/basic-plus-form.component';
 
 
 @NgModule({
@@ -109,7 +111,9 @@ import { FormsComponent } from './forms/forms.component';
     NoRecipeComponent,
     RecipeEditComponent,
     ObservablesComponent,
-    FormsComponent
+    FormsComponent,
+    BasicFormComponent,
+    BasicPlusFormComponent
   ],
   imports: [
     BrowserModule,

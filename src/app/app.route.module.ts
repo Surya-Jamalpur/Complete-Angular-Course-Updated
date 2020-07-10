@@ -17,6 +17,9 @@ import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
 import { RecipeDetailsComponent } from './recipes/recipe-details/recipe-details.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { ObservablesComponent } from './observables/observables.component';
+import { FormsComponent } from './forms/forms.component';
+import { BasicFormComponent } from './forms/basic-form/basic-form.component';
+import { BasicPlusFormComponent } from './forms/basic-plus-form/basic-plus-form.component';
 
 const appRoutes:Routes = [
     {path:'', redirectTo:'/recipes', pathMatch:'full'},
@@ -36,6 +39,11 @@ const appRoutes:Routes = [
     {path:'accounts', component:AccountsComponent},
     {path:'products', component:ProductsComponent},
     {path:'observables', component:ObservablesComponent},
+    {path:'forms', component:FormsComponent, children:[
+        {path:'', component:BasicFormComponent},
+        {path:'basic', component:BasicFormComponent},
+        {path:'basicPlus', component:BasicPlusFormComponent},
+    ]},
     {path:'brands', canActivate:[AuthGuard], component:BrandsComponent},
     {path:'online-services', component:OnlineServicesComponent},
     {path:'**', redirectTo:'/'}
