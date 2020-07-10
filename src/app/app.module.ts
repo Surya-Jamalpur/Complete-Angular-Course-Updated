@@ -57,6 +57,7 @@ import { AuthService } from './auth.service';
 import { NoRecipeComponent } from './recipes/no-recipe/no-recipe.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { ObservablesComponent } from './observables/observables.component';
+import { FormsComponent } from './forms/forms.component';
 
 
 @NgModule({
@@ -107,7 +108,8 @@ import { ObservablesComponent } from './observables/observables.component';
     NavPracticeComponent,
     NoRecipeComponent,
     RecipeEditComponent,
-    ObservablesComponent
+    ObservablesComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
