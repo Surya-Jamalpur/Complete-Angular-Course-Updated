@@ -9,6 +9,8 @@ import { NgForm } from '@angular/forms';
 export class BasicPlusFormComponent implements OnInit {
   oneway='this is a one way data binding Input..';
   twoway='this is a Two way data binding Input..';
+
+  genders = ['male', 'female'];
   constructor() { }
 
   ngOnInit() {

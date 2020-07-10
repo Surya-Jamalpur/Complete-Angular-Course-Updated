@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
                 <h6 style="color:green">here we are grouping name and email and by grouping like this, we get userinf obj with name and email properties
-                    
+
                 </h6>
             <div class="row" ngModelGroup="userinfo">
             <div class="col-md-6">
@@ -32,6 +32,13 @@
         <label>Two way binding</label>
         <input type="text" name="twoway" class="form-control" [(ngModel)]="twoway" required >
         {{twoway}}
+    </div>
+    <div class="col-md-6">
+        <div class="radio" *ngFor="let gender of genders">
+            <label for="">
+                <input type="radio" ngModel name="gender" [value]="gender"> {{gender}}
+            </label>
+        </div>
     </div>
     <div class="col-md-6">
         <button type="submit" class="btn btn-primary">Submit</button>
