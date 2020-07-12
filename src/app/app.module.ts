@@ -60,6 +60,7 @@ import { ObservablesComponent } from './observables/observables.component';
 import { FormsComponent } from './forms/forms.component';
 import { BasicFormComponent } from './forms/basic-form/basic-form.component';
 import { BasicPlusFormComponent } from './forms/basic-plus-form/basic-plus-form.component';
+import { TdFormsPracticeComponent } from './forms/td-forms-practice/td-forms-practice.component';
 
 
 @NgModule({
@@ -113,7 +114,8 @@ import { BasicPlusFormComponent } from './forms/basic-plus-form/basic-plus-form.
     ObservablesComponent,
     FormsComponent,
     BasicFormComponent,
-    BasicPlusFormComponent
+    BasicPlusFormComponent,
+    TdFormsPracticeComponent
   ],
   imports: [
     BrowserModule,

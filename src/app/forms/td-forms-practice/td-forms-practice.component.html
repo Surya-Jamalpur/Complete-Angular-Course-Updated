@@ -1,0 +1,89 @@
+<h1>Template Driven Approch Form Practice</h1>
+
+<form action="" (ngSubmit)="getFormData()" #userInfo="ngForm" >
+<div class="row">
+    <div class="col-md-6">
+        <input style="margin-bottom: 15px;" 
+        placeholder="User Name" 
+        type="text" 
+        name="uname" ngModel
+        required 
+        class="form-control"
+        #uname="ngModel" />
+        <span class="errormsg" 
+        *ngIf="userInfo.submitted && !uname.valid 
+        || userInfo.submitted && !uname.touched
+        || uname.touched && !uname.valid">Please enter User name...</span>
+       
+        <input style="margin-bottom: 15px;" 
+        placeholder="User Email" 
+        type="text" 
+        name="email" 
+        required 
+        ngModel
+        class="form-control" email
+        #email="ngModel" />
+        <span class="errormsg" *ngIf="userInfo.submitted && !email.valid || email.touched && email.value == ''">Please enter User Email...</span>
+        <span class="errormsg" *ngIf="email.touched && email.value != ''&& !email.valid">Please enter a Valid User Email...</span>
+
+        <input style="margin-bottom: 15px;" 
+        placeholder="User Phone" 
+        type="number" 
+        name="phone" 
+        required 
+        ngModel
+        class="form-control" phone />
+        <span style="color: red" *ngIf="isPhone">Please enter this...</span>
+
+        <select name="state" id="state" class="form-control" [ngModel]="defaultState" >
+            <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+        </select>
+    </div>
+
+    <div class="col-md-6"  ngModelGroup="addrInfo">
+        <input style="margin-bottom: 15px;" 
+        placeholder="Address 1" 
+        type="text" 
+        name="address1" 
+        required 
+        ngModel
+        class="form-control" />
+        <span style="color: red" *ngIf="isAddr1">Please enter this...</span>
+
+        <input style="margin-bottom: 15px;" 
+        placeholder="Address 2" 
+        type="text" 
+        name="address2" 
+        required 
+        ngModel
+        class="form-control" />
+        <span style="color: red" *ngIf="isAddr2">Please enter this...</span>
+        <input style="margin-bottom: 15px;" 
+        placeholder="Pin Code" 
+        type="number" 
+        name="pincode" 
+        required 
+        ngModel
+        class="form-control" />
+        <span style="color: red" *ngIf="isPin">Please enter this...</span>
+        {{ addrInfo }}
+        <span class="errormsg"*ngIf=" addrInfo" >this section has errors</span>
+    </div>
+    <div class="col-md-6">
+        <button type="submit" class="btn btn-success">Get Data</button>
+    </div>
+    <div class="col-md-6"><span>form submitted --  {{ userInfo.submitted }}</span></div>
+    <hr>
+    <div class="col-md-6">
+        <h2>your Form Data</h2>
+      Name:  {{ newUser.uname }} <br>
+      Phone:   {{ newUser.phone }} <br>
+      Email:   {{ newUser.email }} <br>
+      State:   {{ newUser.state }} <br>
+      Address 1:   {{ newUser.addrInfo.address1 }} <br>
+      Address 2:   {{ newUser.addrInfo.address2 }} <br>
+      Pincode:   {{ newUser.addrInfo.pincode }} <br>
+    </div>
+</div>
+
+</form>

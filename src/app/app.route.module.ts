@@ -20,6 +20,7 @@ import { ObservablesComponent } from './observables/observables.component';
 import { FormsComponent } from './forms/forms.component';
 import { BasicFormComponent } from './forms/basic-form/basic-form.component';
 import { BasicPlusFormComponent } from './forms/basic-plus-form/basic-plus-form.component';
+import { TdFormsPracticeComponent } from './forms/td-forms-practice/td-forms-practice.component';
 
 const appRoutes:Routes = [
     {path:'', redirectTo:'/recipes', pathMatch:'full'},
@@ -43,6 +44,7 @@ const appRoutes:Routes = [
         {path:'', component:BasicFormComponent},
         {path:'basic', component:BasicFormComponent},
         {path:'basicPlus', component:BasicPlusFormComponent},
+        {path:'td-form-practice', component:TdFormsPracticeComponent},
     ]},
     {path:'brands', canActivate:[AuthGuard], component:BrandsComponent},
     {path:'online-services', component:OnlineServicesComponent},
