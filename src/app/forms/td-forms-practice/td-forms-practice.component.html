@@ -73,12 +73,18 @@
         <button type="submit" class="btn btn-success">Get Data</button>
     </div>
     <div class="col-md-6"><span>form submitted --  {{ userInfo.submitted }}</span></div>
-    <hr>
-    <div class="col-md-6">
+    <hr> 
+    <div class="col-md-12">
         <h2>your Form Data</h2>
+    </div> 
+    
+    <div class="col-md-6">      
       Name:  {{ newUser.uname }} <br>
       Phone:   {{ newUser.phone }} <br>
-      Email:   {{ newUser.email }} <br>
+      Email:   {{ newUser.email }}
+     
+    </div>
+    <div class="col-md-6">
       State:   {{ newUser.state }} <br>
       Address 1:   {{ newUser.addrInfo.address1 }} <br>
       Address 2:   {{ newUser.addrInfo.address2 }} <br>
