@@ -61,6 +61,8 @@ import { FormsComponent } from './forms/forms.component';
 import { BasicFormComponent } from './forms/basic-form/basic-form.component';
 import { BasicPlusFormComponent } from './forms/basic-plus-form/basic-plus-form.component';
 import { TdFormsPracticeComponent } from './forms/td-forms-practice/td-forms-practice.component';
+import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
+import { BasicReactiveComponent } from './forms/reactive-forms/basic-reactive/basic-reactive.component';
 
 
 @NgModule({
@@ -115,7 +117,9 @@ import { TdFormsPracticeComponent } from './forms/td-forms-practice/td-forms-pra
     FormsComponent,
     BasicFormComponent,
     BasicPlusFormComponent,
-    TdFormsPracticeComponent
+    TdFormsPracticeComponent,
+    ReactiveFormsComponent,
+    BasicReactiveComponent
   ],
   imports: [
     BrowserModule,
